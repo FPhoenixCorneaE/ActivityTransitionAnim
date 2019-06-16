@@ -1,4 +1,4 @@
-package com.wkz.sharedelementanim;
+package com.wkz.activitytransition;
 
 import android.content.Context;
 
