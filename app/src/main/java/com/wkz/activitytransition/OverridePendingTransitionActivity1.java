@@ -16,8 +16,9 @@ public class OverridePendingTransitionActivity1 extends BaseActivity implements 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        shouldOverridePending = true;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_override_pending_transition1);
+        setContentView(R.layout.activity_override_pending_transition_1);
         initView();
     }
 

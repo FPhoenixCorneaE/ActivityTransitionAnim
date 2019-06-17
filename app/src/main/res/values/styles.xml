@@ -12,8 +12,21 @@
 
     <!-- 通用主题 -->
     <style name="TranslucentTheme" parent="AppTheme">
-        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- 动画主题 -->
+    <style name="AnimationTheme" parent="TranslucentTheme">
+        <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
+    </style>
+
+    <!--Activity启动、关闭动画-->
+    <style name="ActivityAnim" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/rotate_down_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/rotate_down_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/rotate_down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/rotate_down_out</item>
     </style>
 </resources>

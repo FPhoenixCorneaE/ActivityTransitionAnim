@@ -22,6 +22,12 @@
         </activity>
         <activity android:name=".OverridePendingTransitionActivity1" />
         <activity android:name=".OverridePendingTransitionActivity2" />
+        <activity
+            android:name=".AnimStyleActivity1"
+            android:theme="@style/AnimationTheme" />
+        <activity
+            android:name=".AnimStyleActivity2"
+            android:theme="@style/AnimationTheme" />
     </application>
 
 </manifest>

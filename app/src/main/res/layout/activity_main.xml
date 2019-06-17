@@ -23,7 +23,7 @@
         android:textColor="@android:color/white"
         android:textSize="16sp"
         app:drawableType="selector"
-        app:layout_constraintBottom_toTopOf="@+id/btnStyle"
+        app:layout_constraintBottom_toTopOf="@+id/btnAnimStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,7 +43,7 @@
         tools:ignore="HardcodedText" />
 
     <cn.cricin.folivora.view.Button
-        android:id="@+id/btnStyle"
+        android:id="@+id/btnAnimStyle"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -52,7 +52,7 @@
         android:paddingTop="0dp"
         android:paddingEnd="16dp"
         android:paddingBottom="0dp"
-        android:text="使用 style 方式实现Activity过渡动画"
+        android:text="使用 AnimStyle 方式实现Activity过渡动画"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="16sp"
@@ -93,7 +93,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnActivityOptionsStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStyle"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnimStyle"
         app:selectorStateNormal="shape1"
         app:selectorStatePressed="shape2"
         app:shape1CornerRadius="8dp"

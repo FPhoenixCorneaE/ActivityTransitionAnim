@@ -7,24 +7,23 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
-public class OverridePendingTransitionActivity2 extends BaseActivity implements View.OnClickListener {
+public class AnimStyleActivity2 extends BaseActivity implements View.OnClickListener {
 
     /**
-     * 使用 overridePendingTransition 方法实现Activity过渡动画
+     * 使用 AnimStyle 方式实现Activity过渡动画
      */
-    private Button mBtnOverridePendingTransition;
+    private Button mBtnAnimStyle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        shouldOverridePending = true;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_override_pending_transition_2);
+        setContentView(R.layout.activity_anim_style_2);
         initView();
     }
 
     private void initView() {
-        mBtnOverridePendingTransition = (Button) findViewById(R.id.btnOverridePendingTransition);
-        mBtnOverridePendingTransition.setOnClickListener(this);
+        mBtnAnimStyle = (Button) findViewById(R.id.btnAnimStyle);
+        mBtnAnimStyle.setOnClickListener(this);
     }
 
     @Override
@@ -32,9 +31,15 @@ public class OverridePendingTransitionActivity2 extends BaseActivity implements 
         switch (v.getId()) {
             default:
                 break;
-            case R.id.btnOverridePendingTransition:
+            case R.id.btnAnimStyle:
                 startActivity(new Intent(mContext, MainActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, 0);
     }
 }

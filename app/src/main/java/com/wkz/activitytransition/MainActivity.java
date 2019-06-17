@@ -14,7 +14,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     /**
      * 使用 style 方式实现Activity过渡动画
      */
-    private Button mBtnStyle;
+    private Button mBtnAnimStyle;
     /**
      * 使用 ActivityOptions 实现Activity过渡动画
      */
@@ -38,8 +38,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void initView() {
         mBtnOverridePendingTransition = (Button) findViewById(R.id.btnOverridePendingTransition);
         mBtnOverridePendingTransition.setOnClickListener(this);
-        mBtnStyle = (Button) findViewById(R.id.btnStyle);
-        mBtnStyle.setOnClickListener(this);
+        mBtnAnimStyle = (Button) findViewById(R.id.btnAnimStyle);
+        mBtnAnimStyle.setOnClickListener(this);
         mBtnActivityOptions = (Button) findViewById(R.id.btnActivityOptions);
         mBtnActivityOptions.setOnClickListener(this);
         mBtnActivityOptionsStyle = (Button) findViewById(R.id.btnActivityOptionsStyle);
@@ -56,7 +56,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btnOverridePendingTransition:
                 startActivity(new Intent(mContext, OverridePendingTransitionActivity1.class));
                 break;
-            case R.id.btnStyle:
+            case R.id.btnAnimStyle:
+                startActivity(new Intent(mContext, AnimStyleActivity1.class));
                 break;
             case R.id.btnActivityOptions:
                 break;
