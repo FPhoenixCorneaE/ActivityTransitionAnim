@@ -28,6 +28,8 @@
         <activity
             android:name=".AnimStyleActivity2"
             android:theme="@style/AnimationTheme" />
+        <activity android:name=".ActivityOptionsActivity1" />
+        <activity android:name=".ActivityOptionsActivity2" />
     </application>
 
 </manifest>

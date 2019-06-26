@@ -15,7 +15,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         if (shouldOverridePending) {
             // 跳转时，第一个参数为下一个页面的进入动画，第二个参数为当前页面的退出动画
-            overridePendingTransition(R.anim.rotate_down_in, R.anim.rotate_down_out);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         super.onCreate(savedInstanceState);
         mContext = this;

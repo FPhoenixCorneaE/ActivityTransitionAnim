@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<explode xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500"
+    android:interpolator="@android:interpolator/bounce">
+    <!--不希望顶部的状态栏以及底部的导航栏一起执行动画-->
+    <targets>
+        <target android:excludeId="@android:id/navigationBarBackground" />
+        <target android:excludeId="@android:id/statusBarBackground" />
+    </targets>
+</explode>
