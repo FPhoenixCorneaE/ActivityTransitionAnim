@@ -5,9 +5,11 @@ import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.transition.CircularPropagation;
+import android.transition.Slide;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
 import android.transition.TransitionSet;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -92,7 +94,9 @@ public class ActivityOptionsActivity2 extends BaseActivity implements View.OnCli
         // 第一次进入时使用
         getWindow().setEnterTransition(transitionSet);
         // 再次进入时使用
-        getWindow().setReenterTransition(transitionSet);
+        getWindow().setReenterTransition(new Slide(Gravity.TOP));
+        // 返回时使用
+        getWindow().setReturnTransition(new Slide(Gravity.START));
     }
 
     @Override

@@ -5,10 +5,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.transition.CircularPropagation;
 import android.transition.Explode;
-import android.transition.Fade;
-import android.transition.Slide;
 import android.transition.Transition;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,7 +13,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
 
-public class ActivityOptionsActivity1 extends BaseActivity implements View.OnClickListener {
+public class ActivityOptionsStyleActivity1 extends BaseActivity implements View.OnClickListener {
 
     /**
      * 使用 overridePendingTransition 方法实现Activity过渡动画
@@ -44,8 +41,6 @@ public class ActivityOptionsActivity1 extends BaseActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_options_1);
         initView();
-
-        explode();
     }
 
     private void initView() {
@@ -59,34 +54,6 @@ public class ActivityOptionsActivity1 extends BaseActivity implements View.OnCli
         mBtnActivityOptionsStyle.setOnClickListener(this);
         mBtnActivityOptionsShareElement = (Button) findViewById(R.id.btnActivityOptionsShareElement);
         mBtnActivityOptionsShareElement.setOnClickListener(this);
-    }
-
-    private void explode() {
-        Transition explode = new Explode();
-        explode.setDuration(500);
-
-        final Rect rect = new Rect();
-        mBtnActivityOptions.getLocalVisibleRect(rect);
-        // 粒子扩散的中心点
-        explode.setEpicenterCallback(new Transition.EpicenterCallback() {
-            @Override
-            public Rect onGetEpicenter(Transition transition) {
-                return rect;
-            }
-        });
-        // 指定震源，并以震源开始向外地震波式的动画执行顺序，每个元素执行扩散动画的延迟时间由其距中心的距离决定
-        explode.setPropagation(new CircularPropagation());
-        // 排除目标
-        explode.excludeTarget(mBtnActivityOptions, true);
-
-        // 退出时使用
-        getWindow().setExitTransition(explode);
-        // 第一次进入时使用
-        getWindow().setEnterTransition(explode);
-        // 再次进入时使用
-        getWindow().setReenterTransition(new Fade());
-        // 返回时使用
-        getWindow().setReturnTransition(new Slide(Gravity.END));
     }
 
     @Override
@@ -106,7 +73,7 @@ public class ActivityOptionsActivity1 extends BaseActivity implements View.OnCli
             case R.id.btnActivityOptionsStyle:
             case R.id.btnActivityOptionsShareElement:
                 Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(this, true);
-                startActivity(new Intent(mContext, ActivityOptionsActivity2.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, pairs).toBundle());
+                startActivity(new Intent(mContext, ActivityOptionsStyleActivity2.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, pairs).toBundle());
                 break;
         }
     }

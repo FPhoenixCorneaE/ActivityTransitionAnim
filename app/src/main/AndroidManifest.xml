@@ -30,6 +30,12 @@
             android:theme="@style/AnimationTheme" />
         <activity android:name=".ActivityOptionsActivity1" />
         <activity android:name=".ActivityOptionsActivity2" />
+        <activity
+            android:name=".ActivityOptionsStyleActivity1"
+            android:theme="@style/MaterialAnimationTheme" />
+        <activity
+            android:name=".ActivityOptionsStyleActivity2"
+            android:theme="@style/MaterialAnimationTheme" />
     </application>
 
 </manifest>

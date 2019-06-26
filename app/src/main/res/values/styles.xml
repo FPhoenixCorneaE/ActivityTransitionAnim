@@ -24,6 +24,14 @@
         <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
     </style>
 
+    <style name="MaterialAnimationTheme" parent="AppTheme">
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/explode</item>
+        <item name="android:windowExitTransition">@transition/explode</item>
+        <item name="android:windowReenterTransition">@transition/explode</item>
+        <item name="android:windowReturnTransition">@transition/fade</item>
+    </style>
+
     <!--Activity启动、关闭动画-->
     <style name="ActivityAnim" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/rotate_down_in</item>
