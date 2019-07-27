@@ -71,6 +71,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(mContext, ActivityOptionsStyleActivity1.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, stylePairs).toBundle());
                 break;
             case R.id.btnActivityOptionsShareElement:
+                startActivity(new Intent(mContext, ActivityOptionsShareElementActivity1.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, mBtnActivityOptionsShareElement, getString(R.string.activity_options_share_element_1)).toBundle());
                 break;
         }
     }

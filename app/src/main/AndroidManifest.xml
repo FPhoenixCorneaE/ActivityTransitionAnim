@@ -36,6 +36,7 @@
         <activity
             android:name=".ActivityOptionsStyleActivity2"
             android:theme="@style/MaterialAnimationTheme" />
+        <activity android:name=".ActivityOptionsShareElementActivity1" />
     </application>
 
 </manifest>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ActivityTransitionAnim</string>
+    <string name="activity_options_share_element_1">ActivityOptionsShareElement1</string>
+    <string name="activity_options_share_element_2">ActivityOptionsShareElement2</string>
 </resources>
