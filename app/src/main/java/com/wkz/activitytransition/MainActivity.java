@@ -63,15 +63,25 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(mContext, AnimStyleActivity1.class));
                 break;
             case R.id.btnActivityOptions:
-                Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(this, true);
-                startActivity(new Intent(mContext, ActivityOptionsActivity1.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, pairs).toBundle());
+                Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(
+                        this, true);
+                startActivity(new Intent(mContext, ActivityOptionsActivity1.class),
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, pairs).toBundle());
                 break;
             case R.id.btnActivityOptionsStyle:
-                Pair<View, String>[] stylePairs = TransitionHelper.createSafeTransitionParticipants(this, true);
-                startActivity(new Intent(mContext, ActivityOptionsStyleActivity1.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, stylePairs).toBundle());
+                Pair<View, String>[] stylePairs = TransitionHelper.createSafeTransitionParticipants(
+                        this, true);
+                startActivity(new Intent(mContext, ActivityOptionsStyleActivity1.class),
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, stylePairs)
+                                .toBundle());
                 break;
             case R.id.btnActivityOptionsShareElement:
-                startActivity(new Intent(mContext, ActivityOptionsShareElementActivity1.class), ActivityOptionsCompat.makeSceneTransitionAnimation(mContext, mBtnActivityOptionsShareElement, getString(R.string.activity_options_share_element_1)).toBundle());
+                Pair<View, String>[] shareElementPairs = TransitionHelper.createSafeTransitionParticipants(
+                        this, true, TransitionHelper.createPairArray(mBtnActivityOptionsShareElement)
+                );
+                startActivity(new Intent(mContext, ActivityOptionsShareElementActivity1.class),
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(mContext,
+                                shareElementPairs).toBundle());
                 break;
         }
     }

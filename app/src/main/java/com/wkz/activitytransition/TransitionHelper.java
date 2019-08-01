@@ -62,4 +62,15 @@ public class TransitionHelper {
         }
         participants.add(new Pair<>(view, view.getTransitionName()));
     }
+
+    public static Pair<View, String>[] createPairArray(View... views) {
+        List<Pair<View, String>> pairList = new ArrayList<>();
+        if (views != null) {
+            for (View view : views) {
+                pairList.add(Pair.create(view, view.getTransitionName()));
+            }
+        }
+        Pair<View, String>[] pairs = new Pair[pairList.size()];
+        return pairList.toArray(pairs);
+    }
 }
